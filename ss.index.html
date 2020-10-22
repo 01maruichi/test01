@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社ABCのホームページ</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="ss.style.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="header_container">
+            <div class="logo">
+                <a href="">
+                    <!-- ロゴ画像差し替え予定 -->
+                    <img src="image/logo.png" alt="会社ロゴ" width=150 height="50">
+                </a>
+             </div>
+            <nav class="menu">
+                <ul class="menu_list">
+                    <li>
+                        <a href="#area_boardmember">役員</a>
+                        <!-- 【質問】リンク付けると色がおかしくなった -->
+                    </li>
+                    <li>概要</li>
+                    <li>サービス</li>
+                    <li>アクセス</li>
+                    <li>人材募集</li>
+                </ul>
+             </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- メイン画像セクション -->
+        <section>
+            <div class="main_img">
+                <img src="image/main.png" alt="main_img">
+            </div>
+        </section>
+
+        <!-- section配下の【クラス名規則】area_**＞container_**>divのクラス名 -->
+        <!-- 役員セクション -->
+        <section class="area_boardmember" id="area_boardmember">
+            <div class="section_title">
+                <i class="material-icons">face</i>
+                <p>役員</p>
+            </div>
+            <div class="container_member">
+                <div class="member1 sixty">
+                    <img class="member_img" src="image/inu.png" alt="いぬ">
+                    <div class="text">
+                        <div class="position-box">
+                            <div class="name">山田太郎</div>
+                            <div class="position">代表取締役社長</div>
+                        </div>
+                        <div class="menber_text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus qui iste, doloremque deleniti beatae tempore quo repellat iusto rerum nihil numquam neque explicabo porro odio autem aliquam placeat officiis magni.
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 会社概要 -->
+        <section class="area_profile">
+                <div class="section_title">
+                <i class="material-icons">account_balance</account-balance></i>
+                概要</section>
+                </div>
+            <container class="container_member">
+            </container>
+        </section>
+
+        <!-- サービス -->
+        <section class="area_service">
+            <div class="section_title">
+                <i class="material-icons">stay_primary_portrait</i>
+                サービス
+            </div>
+        </section>
+
+        <!-- アクセス -->
+        <section class="area_access">
+            <div class="section_title">
+                <i class="material-icons">location_on</i>
+                アクセス
+            </div>
+            <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.592781655847!2d139.06567704977576!3d34.81618558443793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019ddd89540684b%3A0x1d7987a51fa307b3!2z54ax5bed44OQ44OK44OK44Ov44OL5ZyS44O75pys5ZyS44O744Ov44OL5ZyS!5e0!3m2!1sja!2sjp!4v1603186672906!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </section>
+    
+        <!-- 人材募集 -->
+            <section class="area_recruit">
+                <div class="section_title">
+                    <i class="material-icons">supervisor_account</i>
+                    人材募集
+                </div>
+                <div>
+                    <div class="cp_iptxt">
+                        <!-- 入力ボックスの作り方 -->
+                        <!-- https://proengineer.internous.co.jp/content/columnfeature/5092 -->
+                        <!-- https://copypet.jp/692/ -->
+                        <p>お名前：<br>
+                        <label class="ef">
+                        <input type="text" placeholder="お名前">
+                        </label>
+                    </p>
+                    </div>
+                    <!-- ボタン -->
+                    <!-- https://grow-group.jp/archives/2674/ -->
+                    <div class="container">
+                        <a href="#" class="btn-border">PUSH ME</a>
+                        </div>
+                </div>
+            </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        Copyright © ABC Inc. All rights reserved.
+    </footer>
+</body>
+</html>

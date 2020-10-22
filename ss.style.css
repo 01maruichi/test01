@@ -1,0 +1,218 @@
+/* マテリアルアイコン */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    background-color: none;
+    
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+body{
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #393b44;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.header_container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_list{
+    font-size: 14px;
+}
+
+li{
+    margin-right: 20px;
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+section{
+    text-align: center;
+}
+
+img{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.main_img{
+    width: 100%;
+    vertical-align: bottom;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+.main-img img {
+    width: 100%;
+  }
+
+.container_member{
+    margin-top: 50px;
+}
+
+.position-box{
+    display: flex;
+}
+
+.name{
+    font-size: 10;
+    font-weight: bold;
+}
+
+.position{
+    margin-left: 50px;
+}
+
+.menber_text{
+    margin-top: 20px;
+}
+
+section[class^="area_"] {
+    padding-bottom: 20px;
+}
+
+i.material-icons{
+    margin-top: 10px;
+}
+
+.section_title{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.menu_list{
+    display: flex;
+}
+
+.area_boardmember{
+    background-color: #f1f3f8;
+}
+
+.sixty{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container_member{
+}
+
+.member_img{
+    width: 150px;
+    height: 150px;
+}
+
+.member1{
+    display: flex;
+    text-align: left;
+}
+
+.area_profile{
+    background-color: #d6e0f0;
+}
+.area_service{
+    background-color: #f1f3f8;
+}
+
+.area_access{
+    background-color:#d6e0f0;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; 
+    /* ↑これが縦横比 */
+    /* https://hacknote.jp/archives/11200/ */
+    height: 0;
+    overflow: hidden;
+    }
+    .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    }
+
+.area_recruit{
+    background-color: #f1f3f8;
+}
+
+i{
+    background-color: none;
+}
+
+.btn-border {
+    display: inline-block;
+    max-width: 180px;
+    text-align: left;
+    border: 2px solid #9ec34b;
+    font-size: 16px;
+    color: #9ec34b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: .4s;
+  }
+  
+  .btn-border:hover {
+    background-color: #9ec34b;
+    border-color: #cbe585;
+    color: #FFF;
+  }
+
+footer{
+    background-color: #393b44;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
