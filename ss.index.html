@@ -3,34 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>株式会社ABCのホームページ</title>
+    <title>Enjoy coding Inc.のホームページ</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="ss.style.css">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+    <!-- バーガーメニューを閉じるために jQuery を導入 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        // id = nav-drawer内のaタグがclickされたら、nav-unshownクラス（input）タグのcheckedを外す、という命令文
+        $(function(){
+            $('#nav-drawer a[href]').on('click', function(event) {
+                $('.nav-unshown').prop('checked', false);
+            });
+        });
+    </script>
+
 </head>
 
-<body>
+<body id="top">
     <!-- ヘッダー -->
     <header>
         <div class="header_container">
             <div class="logo">
-                <a href="">
-                    <!-- ロゴ画像差し替え予定 -->
-                    <img src="image/logo.png" alt="会社ロゴ" width=150 height="50">
+                <a href="#top">
+                    <img src="image/logo.png" alt="会社ロゴ" width=50 height="30">
                 </a>
-             </div>
+            </div>
+
+            <!-- ハンバーガーメニュー -->
+            <nav>
+                <div id="nav-drawer">
+                    <input id="nav-input" type="checkbox" class="nav-unshown">
+                    <label id="nav-open" for="nav-input"><span></span></label>
+                    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                    <div id="nav-content">
+                        <ul class="menu_list_hidden">
+                            <li>
+                                <a class="list_link_hidden" href="#area_boardmember">経営メンバー</a>
+                            </li>
+                            <li>
+                                <a class="list_link_hidden" href="#area_profile">会社概要</a>
+                            </li>
+                            <li>
+                                <a class="list_link_hidden" href="#area_service">サービス</a>
+                            </li>
+                            <li>
+                                <a class="list_link_hidden" href="#area_access">アクセス</a>
+                            </li>
+                            <li>
+                                <a class="list_link_hidden" href="#area_message">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+                    
+            
+
             <nav class="menu">
                 <ul class="menu_list">
                     <li>
-                        <a href="#area_boardmember">役員</a>
-                        <!-- 【質問】リンク付けると色がおかしくなった -->
+                        <a class="list_link" href="#area_boardmember">経営メンバー</a>
                     </li>
-                    <li>概要</li>
-                    <li>サービス</li>
-                    <li>アクセス</li>
-                    <li>人材募集</li>
+                    <li>
+                        <a class="list_link" href="#area_profile">会社概要</a>
+                    </li>
+                    <li>
+                        <a class="list_link" href="#area_service">サービス</a>
+                    </li>
+                    <li>
+                        <a class="list_link" href="#area_access">アクセス</a>
+                    </li>
+                    <li>
+                        <a class="list_link" href="#area_message">お問い合わせ</a>
+                    </li>
                 </ul>
              </nav>
         </div>
@@ -40,7 +91,9 @@
         <!-- メイン画像セクション -->
         <section>
             <div class="main_img">
-                <img src="image/main.png" alt="main_img">
+               <div class="message">
+                <p>ENJOY CODING</p>
+                </div>
             </div>
         </section>
 
@@ -48,83 +101,201 @@
         <!-- 役員セクション -->
         <section class="area_boardmember" id="area_boardmember">
             <div class="section_title">
-                <i class="material-icons">face</i>
-                <p>役員</p>
+                <div class="container_title">
+                    <div>
+                        <i class="material-icons">face</i>
+                    </div>
+                    <div>
+                        <p>経営メンバー</p>
+                    </div>
+                </div>
             </div>
+        
             <div class="container_member">
-                <div class="member1 sixty">
-                    <img class="member_img" src="image/inu.png" alt="いぬ">
+                <div class="member_box sixty">
+                    <img class="member_img" src="image/george.png" alt="ジョージ・クルーニー">
                     <div class="text">
                         <div class="position-box">
-                            <div class="name">山田太郎</div>
+                            <div class="name">George Clooney</div>
                             <div class="position">代表取締役社長</div>
                         </div>
                         <div class="menber_text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus qui iste, doloremque deleniti beatae tempore quo repellat iusto rerum nihil numquam neque explicabo porro odio autem aliquam placeat officiis magni.
+                            ノーザンケンタッキー大学中退。若い頃は太眉にロン毛のウェービーヘアで田舎風だったが、中年になるにつれてイケメン度が増す。50歳を過ぎたくらいから急に色気が溢れ出て、数々の賞を受賞し現在に至る。
+                        </div>    
+                    </div>
+                </div>
+            
+                <div class="member_box sixty">
+                    <img class="member_img" src="image/hugh.png" alt="ヒュー・グラント">
+                    <div class="text">
+                        <div class="position-box">
+                            <div class="name">Hugh Grant</div>
+                            <div class="position">常務取締役</div>
+                        </div>
+                        <div class="menber_text">
+                            オックスフォード大学英文学専攻。ダメ男の演技が世界で高く評価されている。軽すぎず、重すぎず、その絶妙なさじ加減が素晴らしい。軽薄でシニカルだが、どこか憎めない愛すべき個性的なキャラクター。
+                        </div>    
+                    </div>
+                </div>
+        
+                <div class="member_box sixty">
+                    <img class="member_img" src="image/daniel.png" alt="ダニエル・ラドクリフ">
+                    <div class="text">
+                        <div class="position-box">
+                            <div class="name">Daniel Radcliffe</div>
+                            <div class="position">社外取締役</div>
+                        </div>
+                        <div class="menber_text">
+                            ホグワーツ魔法学校卒業。魔法界で「生き残った男の子 (The boy who lived) 」と呼ばれる。同年代に比べ小柄で痩せているが、第6巻『謎のプリンス』では前巻と比べて身長がかなり伸びているとされている。
                         </div>    
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 会社概要 -->
-        <section class="area_profile">
-                <div class="section_title">
-                <i class="material-icons">account_balance</account-balance></i>
-                概要</section>
+        <!-- 会社概要セクション -->
+        <section class="area_profile" id="area_profile">
+            <div class="section_title">
+                <div class="container_title">
+                    <div>
+                        <i class="material-icons">account_balance</account-balance></i>
+                    </div>
+                    <div>
+                        <p>会社概要</p>
+                    </div>
                 </div>
-            <container class="container_member">
-            </container>
-        </section>
+            </div>
 
-        <!-- サービス -->
-        <section class="area_service">
+                <div class="container_profile">
+                    <div class="profile_list">
+                        <ul class="profile_column list1">
+                            <li class="li_profile">社名</li class="li_profile">
+                            <li class="li_profile">設立</li class="li_profile">
+                            <li class="li_profile">役員</li class="li_profile">
+                            <li class="li_profile">　</li class="li_profile">
+                            <li class="li_profile">　</li class="li_profile">
+                            <li class="li_profile">資本金</li class="li_profile">
+                        </ul>
+                        <ul class="profile_column list2">
+                            <li class="li_profile">Enjoy coding Inc.</li class="li_profile">
+                            <li class="li_profile">2010年12月</li class="li_profile">
+                            <li class="li_profile">George Clooney</li class="li_profile">
+                            <li class="li_profile">Hugh Grant</li class="li_profile">
+                            <li class="li_profile">Daniel Radcliffe</li class="li_profile">
+                            <li class="li_profile">1,000万円</li class="li_profile">
+                        </ul>
+                    </div>
+                    <div class="profile_list">
+                        <ul class="profile_column list3">
+                            <li class="li_profile">主な事業</li class="li_profile">
+                            <li class="li_profile">　</li class="li_profile">
+                            <li class="li_profile">法律顧問</li class="li_profile">
+                            <li class="li_profile">所在地</li class="li_profile">
+                            <li class="li_profile">お問合せ先</li class="li_profile">
+                            <li class="li_profile">　</li class="li_profile">
+                            </ul>
+                        <ul class="profile_column list4">
+                            <li class="li_profile">アミューズメント事業</li class="li_profile">
+                            <li class="li_profile"> </li class="li_profile">
+                            <li class="li_profile">スクール運営事業</li class="li_profile">
+                            <li class="li_profile">西村あさひ法律事務所</li class="li_profile">
+                            <li class="li_profile">東京都港区六本木1-2-3</li class="li_profile">
+                            <li class="li_profile">info@enjoy-coding.co.jp</li class="li_profile">
+                            <li class="li_profile">03-1234-5678</li class="li_profile">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        <!-- サービスセクション -->
+        <section class="area_service" id="area_service">
             <div class="section_title">
-                <i class="material-icons">stay_primary_portrait</i>
-                サービス
+                <div class="container_title">
+                    <div>
+                        <i class="material-icons">stay_primary_portrait</i>
+                    </div>
+                    <div>
+                        <p>サービス</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container_service">
+                <div class="service">
+                    <div class="service_img1">
+                        <p class="oceans11">OCEAN'S 11</p>
+                    </div>
+                    <div class="service_detail">
+                        <div class="service_title">
+                            <p>アミューズメント事業</p>
+                        </div>
+                        <div class="service_text">
+                            <p>スリや爆破の達人など、個性溢れるスペシャリスト11人の犯罪ドリームチームが、難攻不落のカジノや銀行から金品を盗み出す事業。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="service_img2">
+                        <p class="harry">Hogwarts School</p>
+                    </div>
+                    <div class="service_detail">
+                        <div class="service_title">
+                            <p>スクール運営事業</p>
+                        </div>
+                        <div class="service_text">
+                            <p>年少の魔女や魔法使いが魔法についての理論や実技を学ぶための教育機関を運営。将来有望な若き人材を魔法使いに育成する事業。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- アクセス -->
-        <section class="area_access">
+        <!-- アクセスセクション -->
+        <section class="area_access" id="area_access">
             <div class="section_title">
-                <i class="material-icons">location_on</i>
-                アクセス
+                <div class="container_title">
+                    <div>
+                        <i class="material-icons">location_on</i>
+                    </div>
+                    <div>
+                        <p>アクセス</p>
+                    </div>
+                </div>
             </div>
-            <div class="google-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.592781655847!2d139.06567704977576!3d34.81618558443793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019ddd89540684b%3A0x1d7987a51fa307b3!2z54ax5bed44OQ44OK44OK44Ov44OL5ZyS44O75pys5ZyS44O744Ov44OL5ZyS!5e0!3m2!1sja!2sjp!4v1603186672906!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="container_map">
+                <div class="google-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13126.298839680852!2d135.4323382!3d34.665442!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3605fe25303252aa!2z44Om44OL44OQ44O844K144Or44O744K544K_44K444Kq44O744K444Oj44OR44Oz!5e0!3m2!1sja!2sjp!4v1603536561987!5m2!1sja!2sjp" width=90% height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
             </div>
         </section>
     
-        <!-- 人材募集 -->
-            <section class="area_recruit">
+        <!-- お問い合わせセクション -->
+            <section class="area_message" id="area_message">
                 <div class="section_title">
-                    <i class="material-icons">supervisor_account</i>
-                    人材募集
+                    <div class="container_title">
+                        <div>
+                            <i class="material-icons">supervisor_account</i>
+                        </div>
+                        <div>
+                            <p>お問い合わせ</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <div class="cp_iptxt">
-                        <!-- 入力ボックスの作り方 -->
-                        <!-- https://proengineer.internous.co.jp/content/columnfeature/5092 -->
-                        <!-- https://copypet.jp/692/ -->
-                        <p>お名前：<br>
-                        <label class="ef">
-                        <input type="text" placeholder="お名前">
-                        </label>
-                    </p>
-                    </div>
+                    <div class="form">
+                        <textarea name="メッセージ" class="message-box" cols="80" rows="10" placeholder="お問い合わせ内容をご記入ください。"></textarea>
+                    </div> 
                     <!-- ボタン -->
                     <!-- https://grow-group.jp/archives/2674/ -->
-                    <div class="container">
-                        <a href="#" class="btn-border">PUSH ME</a>
-                        </div>
+                    <div class="btn">
+                        <a href="#" class="btn-border">送信する</a>
+                    </div>
                 </div>
             </section>
     </main>
 
     <!-- フッター -->
     <footer>
-        Copyright © ABC Inc. All rights reserved.
+        Copyright © Enjoy coding Inc. All rights reserved.
     </footer>
 </body>
 </html>
